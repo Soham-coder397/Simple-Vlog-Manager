@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog : Add Blog</title>
+    <link rel="stylesheet" href="css/add_blog.css">
+</head>
+<body>
+    <nav class="navbar"> 
+            <img src="img/logo.png" class="logo" alt="Logo" height="110px">
+                <ul class="links-container">
+                    <li class="link-item"><a href="home.html" class="link">home</a></li> 
+                    <li class="link-item"><a href="home.html#blogs" class="link">blogs</a></li>
+                </ul> 
+            </nav>
+    <main>
+        <section>
+            <p> CREATE & SHARE</p>
+            <h2>Write a New Blog Post</h2>
+            <p>
+                Share your ideas, experiences, knowledge, and stories
+                with readers around the world.
+            </p>
+        </section>
+        <hr>
+        <section>
+            <h2>Blog Details</h2>
+            <p>
+                Fill in the information below to create your blog post.
+            </p>
+            <form>
+                <!-- Blog Title -->
+                <fieldset>
+                    <legend>
+                        <strong>Basic Information</strong>
+                    </legend>
+                    <br>
+                    <div>
+                        <label for="title">
+                            <strong>Blog Title *</strong>
+                        </label>
+                        <br>
+                        <input
+                            type="text"
+                            id="title"
+                            name="title"
+                            placeholder="Enter an interesting blog title"
+                        >
+                    </div>
+                    <br>
+                    <!-- Author Name -->
+                    <div>
+                        <label for="author">
+                            <strong>Author Name *</strong>
+                        </label>
+                        <br>
+                        <input
+                            type="text"
+                            id="author"
+                            name="author"
+                            placeholder="Enter your name"
+                        >
+                    </div>
+                    <br>
+                    <!-- Category -->
+                    <div>
+                        <label for="category">
+                            <strong>Category *</strong>
+                        </label>
+                        <br>
+                        <input 
+                        type="text" 
+                        id="category" 
+                        name="category" 
+                        placeholder="Enter the type of news"
+                        >
+                    </div>
+                    <br>
+                    <!-- Tags -->
+                    <div>
+
+                        <label for="tags">
+                            <strong>Tags</strong>
+                        </label>
+                        <br>
+                        <input
+                            type="text"
+                            id="tags"
+                            name="tags"
+                            placeholder="Example: HTML, Node.js, Web Development"
+                        >
+                        <p>
+                            Add multiple tags separated by commas.
+                        </p>
+                    </div>
+                </fieldset>
+                <br>
+
+                <!-- ==================== BLOG CONTENT ==================== -->
+                <fieldset>
+                    <legend>
+                        <strong>Blog Content</strong>
+                    </legend>
+                    <br>
+                    <!-- Short Description -->
+                    <div>
+
+                        <label for="description">
+                            <strong>Short Description *</strong>
+                        </label>
+                        <br>
+                        <textarea
+                            id="description"
+                            name="description"
+                            rows="4"
+                            placeholder="Write a short introduction or summary of your blog..."
+                        ></textarea>
+                    </div>
+                    <br>
+                    <!-- Main Blog Content -->
+                    <div>
+
+                        <label for="content">
+                            <strong>Write Your Blog *</strong>
+                        </label>
+                        <br>
+                        <textarea
+                            id="content"
+                            name="content"
+                            rows="15"
+                            placeholder="Start writing your blog content here..."
+                        ></textarea>
+                    </div>
+                    <br>
+
+
+                    <!-- Featured Image URL -->
+                    <div>
+
+                        <label for="image">
+                            <strong>Featured Image URL</strong>
+                        </label>
+                        <br>
+                        <input
+                            type="url"
+                            id="image"
+                            name="image"
+                            placeholder="https://example.com/blog-image.jpg"
+                        >
+                        <p>
+                            Add an optional image URL for your blog post.
+                        </p>
+                    </div>
+                </fieldset>
+                <br>
+                <!-- ==================== PUBLISH SETTINGS ==================== -->
+                <fieldset>
+                    <legend>
+                        <strong>Terms & Conditions</strong>
+                    </legend>
+                    <!-- Confirmation -->
+                    <div class="terms-condition">
+                        <input
+                            type="checkbox"
+                            id="confirm"
+                            name="confirm"
+                        >
+                        <label for="confirm">
+                            I confirm that my blog content is ready
+                            to be published.
+                        </label>
+                    </div>
+                </fieldset>
+                <br>
+                <!-- ==================== FORM BUTTONS ==================== -->
+                <div>
+
+                    <button type="submit">
+                        Publish
+                    </button>
+                    <button type="reset">
+                        Clear
+                    </button>
+                </div>
+            </form>
+        </section>
+        </div> -->
+    </main>
+    </body>
+</html>
