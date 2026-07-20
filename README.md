@@ -7,7 +7,7 @@
 <img width="1890" height="1017" alt="upload3" src="https://github.com/user-attachments/assets/a91c6e1d-011f-4d5e-8e54-800787d7576a" />
 
 
-### ADD Blog
+### ADD Blog Page
 
 <img width="1887" height="1033" alt="upload4" src="https://github.com/user-attachments/assets/c3a20875-55ed-4953-8e73-89c9db668f9c" />
 
