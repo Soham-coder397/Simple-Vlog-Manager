@@ -467,3 +467,84 @@ fieldset,
         transform:translateY(0);
     }
 }
+
+/* Success Popup */
+.success-popup{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.popup-box{
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    width: 320px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    animation: popupScale .3s ease;
+}
+
+.check-icon{
+    width: 80px;
+    height: 80px;
+    margin: auto;
+    border-radius: 50%;
+    background: #28a745;
+    color: white;
+    font-size: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.popup-box h2{
+    margin-bottom: 20px;
+    font-size: 22px;
+}
+
+.popup-box button{
+    padding: 10px 25px;
+    border: none;
+    background: #28a745;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.popup-box button:hover{
+    background: #218838;
+}
+
+@keyframes popupScale{
+    from{
+        transform: scale(.7);
+        opacity:0;
+    }
+    to{
+        transform: scale(1);
+        opacity:1;
+    }
+}
+
+.error-message{
+    color:#ff4d4d;
+    font-size:13px;
+    margin-top:5px;
+    display:block;
+}
+
+input,
+textarea,
+select{
+    transition:.3s;
+}

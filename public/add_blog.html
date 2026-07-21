@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog : Add Blog</title>
     <link rel="stylesheet" href="css/add_blog.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=check" />
 </head>
 <body>
     <nav class="navbar"> 
             <img src="img/logo.png" class="logo" alt="Logo">
-                <ul class="links-container">
+                <ul class="links-container"> 
                     <li class="link-item"><a href="home.html" class="link">home</a></li> 
                     <li class="link-item"><a href="home.html#blogs" class="link">blogs</a></li>
                 </ul> 
@@ -30,7 +31,7 @@
             <p>
                 Fill in the information below to create your blog post.
             </p>
-            <form>
+            <form id="blogform">
                 <!-- Blog Title -->
                 <fieldset>
                     <legend>
@@ -39,36 +40,36 @@
                     <br>
                     <div>
                         <label for="title">
-                            <strong>Blog Title *</strong>
+                            <strong>Blog Title</strong>
                         </label>
                         <br>
                         <input
                             type="text"
                             id="title"
                             name="title"
-                            placeholder="Enter an interesting blog title"
+                            placeholder="Enter an interesting blog title" 
                         >
                     </div>
                     <br>
                     <!-- Author Name -->
                     <div>
                         <label for="author">
-                            <strong>Author Name *</strong>
+                            <strong>Author Name</strong>
                         </label>
                         <br>
                         <input
                             type="text"
                             id="author"
                             name="author"
-                            placeholder="Enter your name"
+                            placeholder="Enter your name"  
                         >
                     </div>
                     <br>
                     <!-- Category -->
                     <div class="form-group">
-                        <label for="category">Category <span>*</span></label>
+                        <label for="category">Category</label>
 
-                        <select id="category" required>
+                        <select id="category" >
 
                             <option value="">Select Category</option>
 
@@ -99,14 +100,14 @@
                     <div>
 
                         <label for="description">
-                            <strong>Short Description *</strong>
+                            <strong>Short Description</strong>
                         </label>
                         <br>
                         <textarea
                             id="description"
                             name="description"
                             rows="4"
-                            placeholder="Write a short introduction or summary of your blog..."
+                            placeholder="Write a short introduction or summary of your blog..." 
                         ></textarea>
                     </div>
                     <br>
@@ -114,7 +115,7 @@
                     <div>
 
                         <label for="content">
-                            <strong>Write Your Blog *</strong>
+                            <strong>Write Your Blog</strong>
                         </label>
                         <br>
                         <textarea
@@ -127,7 +128,7 @@
                     <br>
 
 
-                    <!-- Featured Image URL -->
+                    <!-- Featured Image -->
                     <div>
                         <label for="image">
                             <strong>Upload Image</strong>
@@ -138,26 +139,10 @@
                             id="image"
                             name="image"
                             accept="image/*"
+                           
                         >
                         <p>
                             Add an optional image for your blog post.
-                        </p>
-                    </div>
-                    <br>
-                    <div>
-                        <label for="full-news-url">
-                            <strong>Original News Source URL</strong>
-                        </label>
-                        <br>
-                        <input
-                            type="url"
-                            id="full-news-url"
-                            name="full-news-url"
-                            placeholder="https://example.com/full-news-article.html"
-                        >
-                        <p>
-                           This link will be used for the <strong>"Read More"</strong>
-                            button so readers can view the complete article on the original source.
                         </p>
                     </div>
                 </fieldset>
@@ -184,16 +169,24 @@
                 <!-- ==================== FORM BUTTONS ==================== -->
                 <div>
 
-                    <button type="submit" class="publish">
+                    <button type="submit" class="publish" id="publish">
                         Publish
                     </button>
-                    <button type="reset" class="clear">
+                    <button type="reset" class="clear" id="clearBtn">
                         Clear
                     </button>
                 </div>
             </form>
         </section>
-        
     </main>
+        <div id="successPopup" class="success-popup">
+            <div class="popup-box">
+                <div class="check-icon"><span class="material-symbols-outlined">check</span></div>
+                <h2>Blog Published Successfully!!</h2>
+                <button id="popupCloseBtn">OK</button>
+            </div>
+        </div>
+        
+        <script src="js/add_blog.js"></script>
     </body>
 </html>
