@@ -87,7 +87,7 @@ document.addEventListener("DOMContentLoaded", () => {
             showError(content, "Please write your blog.");
             isValid = false;
         } 
-        else if (content.value.trim().length < 50) {
+        else if (content.value.trim().length < 100) {
             showError(content, "Blog content must be at least 50 characters.");
             isValid = false;
         }
