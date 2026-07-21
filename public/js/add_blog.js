@@ -76,7 +76,7 @@ document.addEventListener("DOMContentLoaded", () => {
             showError(description, "Please enter a short description.");
             isValid = false;
         } 
-        else if (description.value.trim().length < 10) {
+        else if (description.value.trim().length < 20) {
             showError(description, "Description must be at least 10 characters.");
             isValid = false;
         }
