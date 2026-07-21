@@ -198,6 +198,11 @@ document.addEventListener("DOMContentLoaded", () => {
         span.style.display = "block";
 
         input.parentNode.appendChild(span);
+
+        if (!document.querySelector(".focused-error")) {
+            input.focus();
+            input.classList.add("focused-error");
+        }
     }
 
     // ==================== CLEAR ALL ERRORS ====================
@@ -208,6 +213,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         document.querySelectorAll("input, textarea, select").forEach(input => {
             input.style.borderColor = "";
+            input.classList.remove("focused-error");
         });
     }
 
