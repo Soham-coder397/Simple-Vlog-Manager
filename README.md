@@ -1,11 +1,16 @@
 ## Home Page
 
-<img width="1473" height="1011" alt="home1" src="https://github.com/user-attachments/assets/e6797d8b-1a0a-4ad7-9a5a-b87415388792" />
+<img width="1896" height="1014" alt="upload1" src="https://github.com/user-attachments/assets/23c50522-29e9-406b-95c8-3153909dc2d5" />
 
-<img width="845" height="605" alt="home2" src="https://github.com/user-attachments/assets/a77b8a2f-a1f6-44c1-8625-6c02fda416d0" />
+<img width="1885" height="1028" alt="upload2" src="https://github.com/user-attachments/assets/4eac290f-615a-4fd8-9085-91d05417ac1b" />
 
-## Add Blog Page
+<img width="1890" height="1017" alt="upload3" src="https://github.com/user-attachments/assets/a91c6e1d-011f-4d5e-8e54-800787d7576a" />
 
-<img width="811" height="906" alt="add_blog1" src="https://github.com/user-attachments/assets/2c5a7b69-c823-4335-a754-3aa9cd860b2c" />
 
-<img width="686" height="811" alt="add_blog2" src="https://github.com/user-attachments/assets/6bc9593c-4750-47b1-a7e3-12f253b418c5" />
+### ADD Blog Page
+
+<img width="1887" height="1033" alt="upload4" src="https://github.com/user-attachments/assets/c3a20875-55ed-4953-8e73-89c9db668f9c" />
+
+<img width="1900" height="1024" alt="upload5" src="https://github.com/user-attachments/assets/f43b309e-d07e-48c7-8e8e-ef702784806e" />
+
+<img width="1869" height="1021" alt="upload6" src="https://github.com/user-attachments/assets/b9992bbb-8e8a-4996-8f77-4850156697a6" />
