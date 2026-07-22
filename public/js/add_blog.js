@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     // ==================== FORM SUBMIT ====================
-    form.addEventListener("submit", function (e) {
+    form.addEventListener("submit", async function (e) {
         e.preventDefault();
         clearErrors();
 
@@ -55,17 +55,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
             showError(title, "Blog title must be at least 5 characters.");
             isValid = false;
-
         }
 
         // ==================== AUTHOR ====================
         if (author.value.trim() === "") {
+
             showError(author, "Please enter the author name.");
             isValid = false;
         }
 
         // ==================== CATEGORY ====================
         if (category.value === "") {
+
             showError(category, "Please select a category.");
             isValid = false;
         }
@@ -75,8 +76,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
             showError(description, "Please enter a short description.");
             isValid = false;
-        } 
-        else if (description.value.trim().length < 20) {
+
+        } else if (description.value.trim().length < 10) {
+
             showError(description, "Description must be at least 10 characters.");
             isValid = false;
         }
@@ -86,33 +88,61 @@ document.addEventListener("DOMContentLoaded", () => {
 
             showError(content, "Please write your blog.");
             isValid = false;
-        } 
-        else if (content.value.trim().length < 100) {
+
+        } else if (content.value.trim().length < 50) {
+
             showError(content, "Blog content must be at least 50 characters.");
             isValid = false;
         }
 
         // ==================== IMAGE ====================
         if (image.files.length === 0) {
+
             showError(image, "Please upload an image.");
             isValid = false;
         }
 
-        if (!isValid) {
-            return false;
-        }
-
         // ==================== TERMS ====================
         if (!confirmBox.checked) {
+
             alert("Please accept the Terms & Conditions.");
             confirmBox.focus();
-            return false;
+            return;
         }
 
-        // ==================== SUCCESS ====================
-        popup.style.display = "flex";
-        form.reset();
-        clearErrors();
+        if (!isValid) {
+            return;
+        }
+
+        // ==================== SEND DATA TO EXPRESS ====================
+        const formData = new FormData(form);
+
+        try {
+
+            const response = await fetch("/add_blog", {
+                method: "POST",
+                body: formData
+            });
+
+            const message = await response.text();
+
+            if (response.ok) {
+                // alert(message);
+                popup.style.display = "flex";
+                form.reset();
+                clearErrors();
+
+            } 
+            else {
+                alert("Something went wrong!");
+            }
+
+        } 
+        catch (error) {
+            console.error(error);
+            alert("Server Error!");
+        }
+
     });
 
     // ==================== CLEAR BUTTON ====================
@@ -198,11 +228,6 @@ document.addEventListener("DOMContentLoaded", () => {
         span.style.display = "block";
 
         input.parentNode.appendChild(span);
-
-        if (!document.querySelector(".focused-error")) {
-            input.focus();
-            input.classList.add("focused-error");
-        }
     }
 
     // ==================== CLEAR ALL ERRORS ====================
@@ -213,7 +238,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
         document.querySelectorAll("input, textarea, select").forEach(input => {
             input.style.borderColor = "";
-            input.classList.remove("focused-error");
         });
     }
 
