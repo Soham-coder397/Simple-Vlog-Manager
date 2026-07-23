@@ -1,0 +1,29 @@
+[
+    {
+        "id": 1784724544780,
+        "title": "How AI is Changing the Future of Computing",
+        "author": "Tech Desk",
+        "category": "Artificial Intelligence",
+        "description": "Aftificial Intelligence (AI) is transforming software, automation and everyday digital experiences across industries.",
+        "content": "Artificial Intelligence (AI) is reshaping the future of computing by enabling machines to perform tasks that once required human intelligence.From virtual assistants and recomendation systems to healthcare diagnostics and autonomous vehicles, AI is making technology smater and more efficient.",
+        "image": "/uploads/img_AI.jpg"
+    },
+    {
+        "id": 1784732086407,
+        "title": "Tatanagar to Get Two New Sleeper Vande Bharat Trains",
+        "author": "News Desk",
+        "category": "Railways",
+        "description": "Two new sleeper Vande Bharat trains will improve long-distance travel between Tatanagar, Mumbai, and Varanasi.",
+        "content": "Indian Railways is to be introduce two new Sleeper Vande Bharat Express trains connecting Tatanagar with major cities like Mumbai and Varanasi.These trains are expected to provide faster travel, modern sleeper coaches, enhanced passenger comfort and improved onboard facilities.",
+        "image": "/uploads/img_Vande_Bharat.jpg"
+    },
+    {
+        "id":1784732086501,
+        "title": "India return to Harare with more to prove than gain",
+        "author": "Crickbuzz Staff",
+        "category": "Sports",
+        "description": "India begin another T20I tour of Zimbabwe just days after concluding their UK tour With a fresh squad and young players.",
+        "content": "The cricket calendar leaves little room for rest as India travel to Harare for another T20I series shortly after completing their tour of the United Kingdom. While a few ODI players make the journey from London, a new group of T20 specialists arrives from India to form the squad.",
+        "image": "/uploads/img_sport_news1.jpeg"
+    }
+]
