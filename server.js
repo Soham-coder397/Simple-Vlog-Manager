@@ -19,8 +19,6 @@ if (!fs.existsSync(uploadPath)) {
 
 const FILE_PATH = path.join(__dirname, "blogs.json");
 
-// ================= READ =================
-
 function readBlogs() {
 
     if (!fs.existsSync(FILE_PATH)) {
@@ -29,6 +27,19 @@ function readBlogs() {
 
     return JSON.parse(fs.readFileSync(FILE_PATH, "utf8"));
 }
+
+function writeBlogs(blogs) {
+
+    fs.writeFileSync(
+        FILE_PATH,
+        JSON.stringify(blogs, null, 4)
+    );
+
+}
+
+// ================= READ =================
+
+let blogs = [];
 
 // ================= MULTER =================
 
@@ -61,12 +72,6 @@ app.get("/add_blog", (req, res) => {
 
 // ================= API =================
 
-app.get("/blogs", (req, res) => {
-
-    res.json(readBlogs());
-
-});
-
 app.get("/status", (req, res) => {
     res.json({
         status: `Server is Running Successfully at http://localhost:${PORT}`,
@@ -80,33 +85,23 @@ app.get("/status", (req, res) => {
 app.post("/add_blog", upload.single("image"), (req, res) => {
 
     const {
-
         title,
         author,
         category,
         description,
         content
-
     } = req.body;
 
     const blogs = readBlogs();
 
     const blog = {
-
-        id: Date.now(),
-
-        title,
-
-        author,
-
-        category,
-
-        description,
-
-        content,
-
-        image: req.file ? "/uploads/" + req.file.filename : ""
-
+        Id: Date.now(),
+        Title: title,
+        Author:author,
+        Category:category,
+        Description:description,
+        Content:content,
+        Image: req.file ? "/uploads/" + req.file.filename : ""
     };
 
     blogs.push(blog);
@@ -116,11 +111,19 @@ app.post("/add_blog", upload.single("image"), (req, res) => {
     res.json({
         success: true,
         message: "Blog Added Successfully",
-        blog
+        data: blogs
     });
 
-
-
+    console.log("\n\t\tNew Blog Added");
+    console.table({
+        Id: blog.Id,
+        Title: blog.Title,
+        Author: blog.Author,
+        Category: blog.Category,
+        Description: blog.Description,
+        Content: blog.Content,
+        Image: blog.Image
+    });
 });
 
 
