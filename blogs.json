@@ -25,5 +25,14 @@
         "description": "India begin another T20I tour of Zimbabwe just days after concluding their UK tour With a fresh squad and young players.",
         "content": "The cricket calendar leaves little room for rest as India travel to Harare for another T20I series shortly after completing their tour of the United Kingdom. While a few ODI players make the journey from London, a new group of T20 specialists arrives from India to form the squad.",
         "image": "/uploads/img_sport_news1.jpeg"
+    },
+    {
+        "Id": 1784818397393,
+        "Title": "My First Blog",
+        "Author": "Aadya Sharma",
+        "Category": "Technology",
+        "Description": "Using postman server first time",
+        "Content": "Testing the backend server for the first time",
+        "Image": ""
     }
 ]

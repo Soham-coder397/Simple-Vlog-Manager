@@ -37,10 +37,6 @@ function writeBlogs(blogs) {
 
 }
 
-// ================= READ =================
-
-let blogs = [];
-
 // ================= MULTER =================
 
 const storage = multer.diskStorage({
@@ -83,7 +79,7 @@ app.get("/status", (req, res) => {
 // ================= ADD BLOG =================
 
 app.post("/add_blog", upload.single("image"), (req, res) => {
-
+    console.log(req.body)
     const {
         title,
         author,
