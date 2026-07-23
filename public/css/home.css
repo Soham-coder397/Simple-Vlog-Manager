@@ -79,7 +79,7 @@ body{
 
 .header{
     margin-top:75px;
-    height:90vh;
+    height: 85vh;
     background: url(../img/header.png) no-repeat;
     background-size:cover;
     background-position:center;
@@ -172,79 +172,11 @@ body{
     border-right: 3px solid #fff;
 }
 
-/* From Uiverse.io by Creatlydev */ 
-.btn-explore{
-  margin-top: 20px;
-  line-height: 1;
-  text-decoration: none;
-  display: inline-flex;
-  border: none;
-  cursor: pointer;
-  align-items: center;
-  gap: 0.75rem;
-  background-color: var(--clr);
-  color: #fff;
-  border-radius: 10rem;
-  font-weight: 600;
-  padding: 0.75rem 1.5rem;
-  padding-left: 20px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  transition: background-color 0.3s;
-}
-
-.btn-explore .button__icon-wrapper {
-  flex-shrink: 0;
-  width: 25px;
-  height: 25px;
-  position: relative;
-  color: var(--clr);
-  background-color: #fff;
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
-  overflow: hidden;
-}
-
-.btn-explore:hover {
-  background-color: #000;
-}
-
-.btn-explore:hover .button__icon-wrapper {
-  color: #000;
-}
-
-.button__icon-svg--copy {
-  position: absolute;
-  transform: translate(-150%, 150%);
-}
-
-.btn-explore:hover .button__icon-svg:first-child {
-  transition: transform 0.3s ease-in-out;
-  transform: translate(150%, -150%);
-}
-
-.btn-explore:hover .button__icon-svg--copy {
-  transition: transform 0.3s ease-in-out 0.1s;
-  transform: translate(0);
-}
-
-
-/* .btn.dark{
-    background:#111827;
-    box-shadow:none;
-}
-
-.btn.dark:hover{
-    background:#2563eb;
-} */
-
 /* BLOG SECTION */
-
 .blogs-section{
     width:90%;
-    margin: 70px auto;
+    max-width:1400px;
+    margin:80px auto;
 }
 
 .blogs-section h2{
@@ -255,28 +187,27 @@ body{
 .section-text{
     text-align:center;
     color:#666;
-    margin:15px 0 50px;
+    margin-top: 5px;
+    margin-bottom: 30px;
 }
 
 .blog-grid{
     display:grid;
     grid-template-columns:repeat(3,1fr);
     gap:30px;
+    width:100%;
 }
 
 .card{
-
-    background:white;
-    border-radius:20px;
+    background:#fff;
+    border-radius:12px;
     overflow:hidden;
-    box-shadow:0 12px 25px rgba(0,0,0,.08);
-    transition:.4s;
-
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+    transition:.3s;
 }
 
 .card:hover{
-    transform:translateY(-10px);
-    box-shadow:0 25px 60px rgba(0,0,0,.12);
+    transform:translateY(-8px);
 }
 
 .card img{
@@ -286,53 +217,197 @@ body{
 }
 
 .card-content{
-    padding:25px;
+    padding:20px;
 }
 
-.card-content span{
-    color: #4f46e5;
-    font-weight: 600;
+.category{
+    display:inline-block;
+    background: #fff;
+    color: #007bff;
+    font-size:20px;
+    margin-bottom:8px;
 }
 
 .card-content h3{
-    margin:15px 0;
+    color:#222;
+    margin:10px 0;
+    line-height:1.4;
 }
 
 .card-content p{
-    color:#666;
-    margin-bottom:20px;
+    color:#555;
+    line-height:1.7;
+    margin-top:10px;
 }
 
-.read-more-btn{
-    padding:10px 14px;
+.author{
+    margin-top:18px;
+    color:#777;
+    font-weight:bold;
+}
+
+.btn-group{
+    display:flex;
+    gap:15px;
+    margin-top:20px;
+}
+
+.btn-edit{
+    margin-top: 10px;
+    width:90px;
+    height:45px;
     border:none;
-    text-decoration: none;
-    color: #fff;
-    background: linear-gradient(30deg, #0400ff, #4ce3f7);
-    border-radius: 20px;
-    background-size: 100% auto;
-    font-family: inherit;
-    font-size: 17px;
-    padding: 0.6em 1.5em;
+    border-radius:30px;
+    background:linear-gradient(135deg,#2563eb,#06b6d4);
+    color:#fff;
+    font-size:15px;
+    font-weight:600;
+    cursor:pointer;
+    transition:all .35s ease;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    box-shadow:0 8px 18px rgba(37,99,235,.35);
+    position:relative;
+    overflow:hidden;
 }
 
-.read-more-btn:hover{
-    background-position: right center;
-    background-size: 200% auto;
-    -webkit-animation: pulse 2s infinite;
-    animation: pulse512 1.5s infinite;
+.btn-edit::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:-100%;
+    width:100%;
+    height:100%;
+    background:rgba(255,255,255,.25);
+    transform:skewX(-30deg);
+    transition:.5s;
 }
 
-@keyframes pulse512{
-    0%{
-        box-shadow: 0 0 0 0 #05bada66;
-    }
-    70%{
-        box-shadow: 0 0 0 10px rgb(218 103 68 / 0%);
-    }
-    100%{
-        box-shadow: 0 0 0 0 rgb(218 103 68 / 0%);
-    }
+.btn-edit:hover::before{
+    left:120%;
+}
+
+.btn-edit:hover{
+    transform:translateY(-3px);
+    background:linear-gradient(135deg,#1d4ed8,#0891b2);
+    box-shadow:0 12px 25px rgba(37,99,235,.45);
+}
+
+.btn-edit:active{
+    transform:scale(.95);
+}
+
+.btn-delete {
+  margin-top: 8px;
+  margin-left: 15px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgb(20, 20, 20);
+  border: none;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.164);
+  cursor: pointer;
+  transition-duration: 0.3s;
+  overflow: hidden;
+  position: relative;
+  gap: 1px;
+}
+
+.svgIcon {
+  width: 12px;
+  transition-duration: 0.3s;
+}
+
+.svgIcon path {
+  fill: white;
+}
+
+.btn-delete:hover {
+  width: 140px;
+  border-radius: 50px;
+  transition-duration: 0.3s;
+  background-color: rgb(255, 69, 69);
+  align-items: center;
+  gap: 0;
+}
+
+.btn-delete:hover .bin-bottom {
+  width: 50px;
+  transition-duration: 0.3s;
+  transform: translateY(60%);
+}
+
+.bin-top {
+  transform-origin: bottom right;
+}
+
+.btn-delete:hover .bin-top {
+  width: 50px;
+  transition-duration: 0.3s;
+  transform: translateY(60%) rotate(160deg);
+}
+
+.btn-delete::before {
+  position: absolute;
+  top: -20px;
+  content: "Delete";
+  color: white;
+  transition-duration: 0.3s;
+  font-size: 2px;
+}
+
+.btn-delete:hover::before {
+  font-size: 13px;
+  opacity: 1;
+  transform: translateY(35px);
+  transition-duration: 0.3s;
+}
+
+.btn-read {
+ display: inline-block;
+ border-radius: 30px;
+ background-color: #3d405b;
+ border: none;
+ color: #FFFFFF;
+ text-align: center;
+ font-size: 15px;
+ font-weight: 600;
+ width:90px;
+ height:45px;
+ transition: all 0.5s;
+ cursor: pointer;
+ margin-top: 10px;
+}
+
+.btn-read span {
+ cursor: pointer;
+ display: inline-block;
+ position: relative;
+ transition: 0.5s;
+}
+
+.btn-read span:after {
+ content: '»';
+ position: absolute;
+ opacity: 0;
+ top: 0;
+ right: -15px;
+ transition: 0.5s;
+}
+
+.btn-read:hover span {
+ padding-right: 15px;
+}
+
+.btn-read:hover span:after {
+ opacity: 1;
+ right: 0;
 }
 
 .view-more{

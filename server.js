@@ -67,6 +67,14 @@ app.get("/blogs", (req, res) => {
 
 });
 
+app.get("/status", (req, res) => {
+    res.json({
+        status: `Server is Running Successfully at http://localhost:${PORT}`,
+        success:true,
+        message: "API Routing Working Perfectly..."
+    });
+});
+
 // ================= ADD BLOG =================
 
 app.post("/add_blog", upload.single("image"), (req, res) => {
@@ -106,14 +114,12 @@ app.post("/add_blog", upload.single("image"), (req, res) => {
     writeBlogs(blogs);
 
     res.json({
-
         success: true,
-
         message: "Blog Added Successfully",
-
         blog
-
     });
+
+
 
 });
 
