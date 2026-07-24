@@ -42,44 +42,45 @@ body{
     height:110px;
 }
 
-.links-container{
-    display:flex;
-    list-style:none;
-    gap:25px;
+.links-container {
+    display: flex;
+    list-style: none;
+    gap: 25px;
 }
 
-.link{
-    text-decoration:none;
-    color:#334155;
-    font-weight:500;
-    transition:.3s;
-    position:relative;
+.link {
+    text-decoration: none;
+    color: #334155;
+    font-weight: 500;
+    position: relative;
+    transition: color .3s, transform .3s;
 }
 
-.link::after{
-    content:'';
-    position:absolute;
-    left:0;
-    bottom:-5px;
-    width:0%;
-    height:2px;
-    background:#2563eb;
-    transition:.3s;
+.link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background: #2563eb;
+    transition: width .3s;
 }
 
-.link:hover{
-    color:#2563eb;
+.link:hover {
+    color: #2563eb;
+    transform: translateY(-2px);
 }
 
-.link:hover::after{
-    width:100%;
+.link:hover::after {
+    width: 100%;
 }
 
 /* HERO */
 
 .header{
     margin-top:75px;
-    height: 85vh;
+    height: 60vh;
     background: url(../img/header.png) no-repeat;
     background-size:cover;
     background-position:center;
@@ -176,7 +177,7 @@ body{
 .blogs-section{
     width:90%;
     max-width:1400px;
-    margin:80px auto;
+    margin:30px auto;
 }
 
 .blogs-section h2{
@@ -369,47 +370,6 @@ body{
   transition-duration: 0.3s;
 }
 
-.btn-read {
- display: inline-block;
- border-radius: 30px;
- background-color: #3d405b;
- border: none;
- color: #FFFFFF;
- text-align: center;
- font-size: 15px;
- font-weight: 600;
- width:90px;
- height:45px;
- transition: all 0.5s;
- cursor: pointer;
- margin-top: 10px;
-}
-
-.btn-read span {
- cursor: pointer;
- display: inline-block;
- position: relative;
- transition: 0.5s;
-}
-
-.btn-read span:after {
- content: '»';
- position: absolute;
- opacity: 0;
- top: 0;
- right: -15px;
- transition: 0.5s;
-}
-
-.btn-read:hover span {
- padding-right: 15px;
-}
-
-.btn-read:hover span:after {
- opacity: 1;
- right: 0;
-}
-
 .view-more{
     margin-top: 40px;
     display: flex;
@@ -502,26 +462,4 @@ footer hr{
 .copyright{
     text-align:center;
     color:#94a3b8;
-}
-
-/* RESPONSIVE */
-
-@media(max-width:768px){
-
-    .navbar{
-        padding:0 20px;
-    }
-
-    .heading{
-        font-size:48px;
-    }
-
-    .heading .small{
-        font-size:18px;
-    }
-
-    .blogs-section{
-        padding:70px 20px;
-    }
-
 }

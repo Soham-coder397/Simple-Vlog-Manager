@@ -1,12 +1,30 @@
 [
     {
+        "id": 1784871049160,
+        "title": "Getting Started With HTML",
+        "author": "John Doe",
+        "category": "Web Development",
+        "description": "Learn the basics of HTML and and create your first web page",
+        "content": "HTML is a standard markup language used to create and structure web pages. It defines the layout of a webpage by organizing content such as headings, paragraphs, images, links, tables and forms.",
+        "image": "/uploads/49129_html.png"
+    },
+    {
+        "id": 1784867738538,
+        "title": "Apple Launces Back to School Offer: Free Airpods with Mac",
+        "author": "MC Tech Desk",
+        "category": "Technology",
+        "description": "Apple's Back to School offer gives eligible students and educators free airpods with select Mac purchases, along with education discounts.",
+        "content": "Apple has launched its Back to School offer in india, running from July 16 to August 27,2026. Eligible students,educators and parents can get free AirPods when purchasing select MacBook Air through Apple's Education Store.",
+        "image": "/uploads/38422_MacBook.jpg"
+    },
+    {
         "id": 1784724544780,
         "title": "How AI is Changing the Future of Computing",
         "author": "Tech Desk",
         "category": "Artificial Intelligence",
         "description": "Aftificial Intelligence (AI) is transforming software, automation and everyday digital experiences across industries.",
-        "content": "Artificial Intelligence (AI) is reshaping the future of computing by enabling machines to perform tasks that once required human intelligence.From virtual assistants and recomendation systems to healthcare diagnostics and autonomous vehicles, AI is making technology smater and more efficient.",
-        "image": "/uploads/img_AI.jpg"
+        "content": "Artificial Intelligence (AI) is reshaping the future of computing by enabling machines to perform tasks that once required human intelligence.",
+        "image": "/uploads/24963_AI.jpg"
     },
     {
         "id": 1784732086407,
@@ -14,8 +32,8 @@
         "author": "News Desk",
         "category": "Railways",
         "description": "Two new sleeper Vande Bharat trains will improve long-distance travel between Tatanagar, Mumbai, and Varanasi.",
-        "content": "Indian Railways is to be introduce two new Sleeper Vande Bharat Express trains connecting Tatanagar with major cities like Mumbai and Varanasi.These trains are expected to provide faster travel, modern sleeper coaches, enhanced passenger comfort and improved onboard facilities.",
-        "image": "/uploads/img_Vande_Bharat.jpg"
+        "content": "Indian Railways is to be introduce two new Sleeper Vande Bharat Express trains connecting Tatanagar with major cities like Mumbai and Varanasi.",
+        "image": "/uploads/28744_Vande_Bharat.jpg"
     },
     {
         "id": 1784732086501,
@@ -23,16 +41,7 @@
         "author": "Crickbuzz Staff",
         "category": "Sports",
         "description": "India begin another T20I tour of Zimbabwe just days after concluding their UK tour With a fresh squad and young players.",
-        "content": "The cricket calendar leaves little room for rest as India travel to Harare for another T20I series shortly after completing their tour of the United Kingdom. While a few ODI players make the journey from London, a new group of T20 specialists arrives from India to form the squad.",
-        "image": "/uploads/img_sport_news1.jpeg"
-    },
-    {
-        "Id": 1784818397393,
-        "Title": "My First Blog",
-        "Author": "Aadya Sharma",
-        "Category": "Technology",
-        "Description": "Using postman server first time",
-        "Content": "Testing the backend server for the first time",
-        "Image": ""
+        "content": "The cricket calendar leaves little room for rest as India travel to Harare for another T20I series shortly after completing their tour of the United Kingdom.",
+        "image": "/uploads/27013_sport_news1.jpeg"
     }
 ]
