@@ -221,7 +221,8 @@ textarea:focus{
     box-shadow:0 0 0 5px rgba(37,99,235,.12);
 }
 
-strong{
+strong,
+.category{
   color: #2563eb;
   font-weight: 600;
 }
