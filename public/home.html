@@ -75,6 +75,93 @@
         <hr> 
         <p class="copyright"> © 2026 Simple Blog Manager </p> 
     </footer>
+    <div id="edit-popup" class="edit-popup">
+            <div class="popup-box">
+                <main>
+                <!-- ==================== FORM ==================== -->
+                <section>
+                    <form id="blogform" enctype="multipart/form-data">
+                        <input type="hidden" id="blogId">
+                        <!-- Blog Details -->
+                        <fieldset>
+                            <!-- Blog Title -->
+                            <div>
+                                <label for="title">
+                                    <strong>Blog Title</strong>
+                                </label>
+                                <input
+                                    type="text"
+                                    id="title"
+                                    name="title"
+                                    placeholder="Enter an interesting blog title">
+                            </div>
+                            <br>
+                            <!-- Author -->
+                            <div>
+                                <label for="author">
+                                    <strong>Author Name</strong>
+                                </label>
+                                <input
+                                    type="text"
+                                    id="author"
+                                    name="author"
+                                    placeholder="Enter your name">
+                            </div>
+                            <br>
+                            <!-- Category -->
+                            <div class="form-group">
+                                <label for="category" class="category">
+                                    <strong>Category</strong>
+                                </label>
+                                <select id="category" name="category">
+                                    <option value="">Select Category</option>
+                                    <option>Technology</option>
+                                    <option>Programming</option>
+                                    <option>Artificial Intelligence</option>
+                                    <option>Web Development</option>
+                                    <option>Science</option>
+                                    <option>Sports</option>
+                                    <option>Travel</option>
+                                    <option>Railways</option>
+                                </select>
+                            </div>
+                            <br>
+                            <!-- Short Description -->
+                            <div>
+                                <label for="description">
+                                    <strong>Short Description</strong>
+                                </label>
+                                <textarea
+                                    id="description"
+                                    name="description"
+                                    rows="2"
+                                    placeholder="Write a short introduction or summary of your blog..."></textarea>
+                            </div>
+                            <br>
+                            <!-- Blog Content -->
+                            <div>
+                                <label for="content">
+                                    <strong>Write Your Blog</strong>
+                                </label>
+                                <textarea
+                                    id="content"
+                                    name="content"
+                                    rows="5"
+                                    placeholder="Start writing your blog content here..."></textarea>
+                            </div>
+                            <br>
+                        </fieldset>
+                        <!-- Buttons -->
+                        <div>
+                            <button type="submit" class="update" id="updateBtn">
+                                Update
+                            </button>
+                        </div>
+                    </form>
+                </section>
+            </main>
+            </div>
+        </div>
     <script src="js/home.js"></script>
 </body> 
 </html>

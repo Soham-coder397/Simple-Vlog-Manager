@@ -26,7 +26,7 @@
         </section>
         <hr>
         
-        <section>
+        <section class="second-child">
             <h2>Blog Details</h2>
             <p>
                 Fill in the information below to create your blog post.
@@ -34,15 +34,10 @@
             <form id="blogform" enctype="multipart/form-data">
                 <!-- Blog Title -->
                 <fieldset>
-                    <legend>
-                        <strong>Basic Information</strong>
-                    </legend>
-                    <br>
                     <div>
                         <label for="title">
                             <strong>Blog Title</strong>
                         </label>
-                        <br>
                         <input
                             type="text"
                             id="title"
@@ -56,7 +51,6 @@
                         <label for="author">
                             <strong>Author Name</strong>
                         </label>
-                        <br>
                         <input
                             type="text"
                             id="author"
@@ -68,7 +62,6 @@
                     <!-- Category -->
                     <div class="form-group">
                         <label for="category" class="category">Category</label>
-                        <br>
                         <select id="category" name="category">
 
                             <option value="">Select Category</option>
@@ -77,33 +70,20 @@
                             <option>Programming</option>
                             <option>Artificial Intelligence</option>
                             <option>Web Development</option>
-                            <option>Mobile App Development</option>
                             <option>Science</option>
-                            <option>Education</option>
                             <option>Sports</option>
                             <option>Travel</option>
                             <option>Railways</option>
-                            <option>Food</option>
-                            <option>Lifestyle</option>
-                            <option>Business</option>
                         </select>
                     </div>
-                </fieldset>
-                <br>
 
                 <!-- ==================== BLOG CONTENT ==================== -->
-                <fieldset>
-                    <legend>
-                        <strong>Blog Content</strong>
-                    </legend>
-                    <br>
                     <!-- Short Description -->
+                     <br>
                     <div>
-
                         <label for="description">
                             <strong>Short Description</strong>
                         </label>
-                        <br>
                         <textarea
                             id="description"
                             name="description"
@@ -118,7 +98,6 @@
                         <label for="content">
                             <strong>Write Your Blog</strong>
                         </label>
-                        <br>
                         <textarea
                             id="content"
                             name="content"
@@ -134,13 +113,11 @@
                         <label for="image">
                             <strong>Upload Image</strong>
                         </label>
-                        <br>
                         <input
                             type="file"
                             id="image"
                             name="image"
                             accept="image/*"
-                           
                         >
                         <p>
                             Add an optional image for your blog post.

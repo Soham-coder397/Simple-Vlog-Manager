@@ -126,6 +126,78 @@ app.get("/blogs", (req, res) => {
     res.json(readBlogs());
 });
 
+// =============== Edit Page ===================
+app.get("/edit_blog", (req, res) => {
+    res.sendFile(path.join(__dirname, "public", "edit_blog.html"));
+});
+
+// ================= Get Blog By ID =================
+app.get("/blogs/:id", (req, res) => {
+    const id = Number(req.params.id);
+    const blogs = readBlogs();
+    const blog = blogs.find(b => b.id === id);
+    if (!blog) {
+        return res.status(404).json({ 
+            success: false, 
+            message: "Blog not found" 
+        });
+    }
+    res.json(blog);
+});
+
+// ================= Update Blog =================
+app.put("/blogs/:id", upload.single("image"), (req, res) => {
+
+    const id = Number(req.params.id);
+    const blogs = readBlogs();
+
+    const index = blogs.findIndex(blog => blog.id === id);
+
+    if (index === -1) {
+        return res.status(404).json({
+            success: false,
+            message: "Blog not found"
+        });
+    }
+
+    const blog = blogs[index];
+
+    blog.title = req.body.title;
+    blog.author = req.body.author;
+    blog.category = req.body.category;
+    blog.description = req.body.description;
+    blog.content = req.body.content;
+
+    if (req.file) {
+
+        if (blog.image) {
+
+            const oldImagePath = path.join(
+                __dirname,
+                "public",
+                blog.image.replace("/uploads/", "uploads/")
+            );
+
+            if (fs.existsSync(oldImagePath)) {
+                fs.unlinkSync(oldImagePath);
+            }
+        }
+
+        // Save new image path
+        blog.image = "/uploads/" + req.file.filename;
+    }
+
+    blogs[index] = blog;
+
+    writeBlogs(blogs);
+
+    res.json({
+        success: true,
+        message: "Blog Updated Successfully",
+        data: blog
+    });
+});
+
 // ================= SERVER =================
 app.listen(PORT, () => {
     console.log(`Server Running : http://localhost:${PORT}`);
