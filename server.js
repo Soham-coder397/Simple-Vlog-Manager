@@ -150,7 +150,6 @@ app.put("/blogs/:id", upload.single("image"), (req, res) => {
 
     const id = Number(req.params.id);
     const blogs = readBlogs();
-
     const index = blogs.findIndex(blog => blog.id === id);
 
     if (index === -1) {
@@ -182,8 +181,6 @@ app.put("/blogs/:id", upload.single("image"), (req, res) => {
                 fs.unlinkSync(oldImagePath);
             }
         }
-
-        // Save new image path
         blog.image = "/uploads/" + req.file.filename;
     }
 
@@ -196,6 +193,19 @@ app.put("/blogs/:id", upload.single("image"), (req, res) => {
         message: "Blog Updated Successfully",
         data: blog
     });
+});
+
+// ================= Delete Blog =================
+app.delete("/blogs/:id", (req, res) => {
+   const blogs = readBlogs();
+   const newBlogs = blogs.filter(
+    b => b.id != req.params.id
+   );
+   writeBlogs(newBlogs);
+   res.json({
+    success: true,
+    message: "Blog Deleted Successfully",
+   });
 });
 
 // ================= SERVER =================

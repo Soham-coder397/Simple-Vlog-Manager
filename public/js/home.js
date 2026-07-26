@@ -119,26 +119,33 @@ loadBlogs();
 
 // ===================== OPEN EDIT POPUP =====================
 function openEditPopup(blog) {
-
     popup.style.display = "flex";
-
     blogId.value = blog.id;
-
     title.value = blog.title;
     author.value = blog.author;
     category.value = blog.category;
     description.value = blog.description;
     content.value = blog.content;
+}
 
+// ======================== Delete Blog ======================
+async function deleteBlog(id) {
+    const ok = confirm("Are you sure want to delete this blog?");
+    if (!ok) {
+        return;
+    }
+    const responce = await fetch(`/blogs/${id}`, {
+        method: "DELETE"
+    });
+    const data = await responce.json();
+    alert(data.message);
+    loadBlogs();
 }
 
 // ===================== UPDATE BLOG =====================
 form.addEventListener("submit", async function (e) {
-
     e.preventDefault();
-
     const id = blogId.value;
-
     const formData = new FormData();
 
     formData.append("title", title.value);
@@ -147,7 +154,6 @@ form.addEventListener("submit", async function (e) {
     formData.append("description", description.value);
     formData.append("content", content.value);
 
-    // image input থাকলে
     const imageInput = document.getElementById("image");
 
     if (imageInput && imageInput.files.length > 0) {
@@ -155,12 +161,9 @@ form.addEventListener("submit", async function (e) {
     }
 
     try {
-
         const response = await fetch(`/blogs/${id}`, {
-
             method: "PUT",
             body: formData
-
         });
 
         const data = await response.json();
@@ -168,65 +171,45 @@ form.addEventListener("submit", async function (e) {
         if (!response.ok) {
             throw new Error(data.message);
         }
-
+        
         alert(data.message);
-
         popup.style.display = "none";
-
         form.reset();
-
         loadBlogs();
-
     }
 
     catch (err) {
-
         console.error(err);
-
         alert(err.message);
-
     }
 
 });
-
 
 // ===================== CLOSE POPUP (CLICK OUTSIDE) =====================
 popup.addEventListener("click", function (e) {
 
     if (e.target === popup) {
-
         popup.style.display = "none";
-
     }
 
 });
 
-
 // ===================== ESC KEY CLOSE =====================
 document.addEventListener("keydown", function (e) {
-
     if (e.key === "Escape") {
-
         popup.style.display = "none";
-
     }
-
 });
 
 
 // ===================== RESET WHEN POPUP CLOSE =====================
 function closePopup() {
-
     popup.style.display = "none";
-
     form.reset();
-
 }
 
 const popupCloseBtn = document.getElementById("popupCloseBtn");
 
 if (popupCloseBtn) {
-
     popupCloseBtn.addEventListener("click", closePopup);
-
 }
