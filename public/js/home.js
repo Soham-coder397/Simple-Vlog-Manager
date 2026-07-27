@@ -1,9 +1,7 @@
 // ===================== ELEMENTS =====================
 const form = document.getElementById("blogform");
 const popup = document.getElementById("edit-popup");
-
 const blogId = document.getElementById("blogId");
-
 const title = document.getElementById("title");
 const author = document.getElementById("author");
 const category = document.getElementById("category");
@@ -11,111 +9,75 @@ const description = document.getElementById("description");
 const content = document.getElementById("content");
 
 let blogs = [];
-
 // ===================== LOAD BLOGS =====================
 async function loadBlogs() {
-
     const container = document.getElementById("blogs");
-
     container.innerHTML = "<h2>Loading...</h2>";
-
     try {
-
         const response = await fetch("/blogs");
-
         if (!response.ok) {
             throw new Error("Failed to load blogs");
         }
-
         blogs = await response.json();
-
         container.innerHTML = "";
-
         if (blogs.length === 0) {
-
             container.innerHTML = `
                 <div class="empty">
                     No Blogs Found
                 </div>
             `;
-
             return;
         }
-
         blogs.forEach(blog => {
-
             const card = document.createElement("div");
-
             card.className = "card";
-
             card.innerHTML = `
                 <img src="${blog.image}" alt="${blog.title}">
-
                 <div class="card-content">
-
                     <span class="category">
                         ${blog.category}
                     </span>
-
                     <h3>
                         ${blog.title}
                     </h3>
-
                     <p>
                         ${blog.content}
                     </p>
-
                     <p class="author">
                         By ${blog.author}
                     </p>
-
                     <div class="btn-group">
-
                         <button class="btn-edit">
                             Edit
                         </button>
-
                         <button class="btn-delete">
                             Delete
                         </button>
-
                     </div>
-
                 </div>
             `;
-
             // EDIT
             card.querySelector(".btn-edit").addEventListener("click", () => {
                 openEditPopup(blog);
             });
-
             // DELETE
             card.querySelector(".btn-delete").addEventListener("click", () => {
                 deleteBlog(blog.id);
             });
-
             container.appendChild(card);
-
         });
-
     }
-
     catch (err) {
-
         console.error(err);
-
         container.innerHTML = `
             <div class="empty">
                 Error Loading Blogs
             </div>
         `;
-
     }
-
 }
 
 loadBlogs();
-
 
 // ===================== OPEN EDIT POPUP =====================
 function openEditPopup(blog) {
@@ -142,7 +104,7 @@ async function deleteBlog(id) {
     loadBlogs();
 }
 
-// ===================== UPDATE BLOG =====================
+// ===================== Edit BLOG =====================
 form.addEventListener("submit", async function (e) {
     e.preventDefault();
     const id = blogId.value;
@@ -155,7 +117,6 @@ form.addEventListener("submit", async function (e) {
     formData.append("content", content.value);
 
     const imageInput = document.getElementById("image");
-
     if (imageInput && imageInput.files.length > 0) {
         formData.append("image", imageInput.files[0]);
     }

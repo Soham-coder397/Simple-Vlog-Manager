@@ -3,7 +3,6 @@ const path = require("path");
 const multer = require("multer");
 const cors = require("cors");
 const fs = require("fs");
-const Table = require("cli-table3");
 
 const app = express();
 const PORT = 3000;
@@ -91,29 +90,6 @@ app.post("/add_blog", upload.single("image"), (req, res) => {
 
     blogs.unshift(blog);
     writeBlogs(blogs);
-
-    const table = new Table({
-        head: ["ID", "Title", "Author", "Category", "Description", "Image"]
-    });
-
-    console.log("\n\t\t\t\t\t\t\tNEW BLOG PUBLISHED");
-
-    blogs.forEach((item) => {
-        table.push([
-            item.id,
-            item.title.length > 20
-                ? item.title.substring(0, 17) + "..."
-                : item.title,
-            item.author,
-            item.category,
-            item.description.length > 25
-                ? item.description.substring(0, 22) + "..."
-                : item.description,
-            item.image
-        ]);
-    });
-
-    console.log(table.toString());
 
     res.json({
         success: true,
