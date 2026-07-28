@@ -687,6 +687,10 @@ strong{
     .card img{
         height:420px;
     }
+
+    section:first-child h2 {
+        font-size: 30px;
+    }
 }
 
 @media (max-width: 992px) and (orientation: landscape) {
