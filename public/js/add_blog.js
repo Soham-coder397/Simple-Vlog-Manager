@@ -12,7 +12,21 @@ document.addEventListener("DOMContentLoaded", () => {
     const clearBtn = document.getElementById("clearBtn");
     const popup = document.getElementById("successPopup");
     const popupCloseBtn = document.getElementById("popupCloseBtn");
+    const btn = document.getElementById("menuBtn");
+    const menu = document.getElementById("menu");
+    const icon = document.getElementById("icon");
 
+    btn.onclick = () => {
+        menu.classList.toggle("show");
+        if (icon.classList[1] == "fa-bars") {
+            icon.classList.remove("fa-bars");
+            icon.classList.add("fa-xmark");
+        }
+        else {
+            icon.classList.remove("fa-xmark");
+            icon.classList.add("fa-bars");
+        }
+    }
     // ==================== IMAGE VALIDATION ====================
     image.addEventListener("change", validateImage);
 
@@ -132,12 +146,12 @@ document.addEventListener("DOMContentLoaded", () => {
                 form.reset();
                 clearErrors();
 
-            } 
+            }
             else {
                 alert("Something went wrong!");
             }
 
-        } 
+        }
         catch (error) {
             console.error(error);
             alert("Server Error!");
@@ -184,7 +198,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // ==================== IMAGE VALIDATION FUNCTION ====================
     function validateImage() {
-        if (image.files.length === 0) 
+        if (image.files.length === 0)
             return false;
 
         const file = image.files[0];

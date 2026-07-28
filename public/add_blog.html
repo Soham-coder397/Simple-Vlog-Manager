@@ -1,20 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog : Add Blog</title>
+    <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="css/add_blog.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=check" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=check" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css">
 </head>
+
 <body>
-    <nav class="navbar"> 
+    <nav class="navbar">
+        <div class="desktop">
             <img src="img/logo.png" class="logo" alt="Logo">
-                <ul class="links-container"> 
-                    <li class="link-item"><a href="/" class="link">home</a></li> 
-                    <li class="link-item"><a href="/view_blogs" class="link">blogs</a></li>
-                </ul> 
-            </nav>
+            <ul class="links-container">
+                <li class="link-item"><a href="/" class="link">Home</a></li>
+                <li class="link-item"><a href="/blogs" class="link">Blogs</a></li>
+            </ul>
+        </div>
+        <div class="mobile">
+            <img src="img/logo.png" class="logo" alt="Logo">
+            <button id="menuBtn">
+                <i id="icon" class="fa-solid fa-bars"></i>
+            </button>
+            <ul id="menu">
+                <li><a href="/"><i class="fa-solid fa-house"></i> Home</a></li>
+                <li><a href="/blogs"><i class="fa-solid fa-blog"></i> Blogs</a></li>
+            </ul>
+        </div>
+    </nav>
     <main>
         <section>
             <p> CREATE & SHARE</p>
@@ -25,7 +42,7 @@
             </p>
         </section>
         <hr>
-        
+
         <section class="second-child">
             <h2>Blog Details</h2>
             <p>
@@ -38,12 +55,7 @@
                         <label for="title">
                             <strong>Blog Title</strong>
                         </label>
-                        <input
-                            type="text"
-                            id="title"
-                            name="title"
-                            placeholder="Enter an interesting blog title" 
-                        >
+                        <input type="text" id="title" name="title" placeholder="Enter an interesting blog title">
                     </div>
                     <br>
                     <!-- Author Name -->
@@ -51,12 +63,7 @@
                         <label for="author">
                             <strong>Author Name</strong>
                         </label>
-                        <input
-                            type="text"
-                            id="author"
-                            name="author"
-                            placeholder="Enter your name"  
-                        >
+                        <input type="text" id="author" name="author" placeholder="Enter your name">
                     </div>
                     <br>
                     <!-- Category -->
@@ -77,19 +84,15 @@
                         </select>
                     </div>
 
-                <!-- ==================== BLOG CONTENT ==================== -->
+                    <!-- ==================== BLOG CONTENT ==================== -->
                     <!-- Short Description -->
-                     <br>
+                    <br>
                     <div>
                         <label for="description">
                             <strong>Short Description</strong>
                         </label>
-                        <textarea
-                            id="description"
-                            name="description"
-                            rows="4"
-                            placeholder="Write a short introduction or summary of your blog..." 
-                        ></textarea>
+                        <textarea id="description" name="description" rows="4"
+                            placeholder="Write a short introduction or summary of your blog..."></textarea>
                     </div>
                     <br>
                     <!-- Main Blog Content -->
@@ -98,12 +101,8 @@
                         <label for="content">
                             <strong>Write Your Blog</strong>
                         </label>
-                        <textarea
-                            id="content"
-                            name="content"
-                            rows="15"
-                            placeholder="Start writing your blog content here..."
-                        ></textarea>
+                        <textarea id="content" name="content" rows="15"
+                            placeholder="Start writing your blog content here..."></textarea>
                     </div>
                     <br>
 
@@ -113,12 +112,7 @@
                         <label for="image">
                             <strong>Upload Image</strong>
                         </label>
-                        <input
-                            type="file"
-                            id="image"
-                            name="image"
-                            accept="image/*"
-                        >
+                        <input type="file" id="image" name="image" accept="image/*">
                         <p>
                             Add an optional image for your blog post.
                         </p>
@@ -132,11 +126,7 @@
                     </legend>
                     <!-- Confirmation -->
                     <div class="terms-condition">
-                        <input
-                            type="checkbox"
-                            id="confirm"
-                            name="confirm"
-                        >
+                        <input type="checkbox" id="confirm" name="confirm">
                         <label for="confirm">
                             I confirm that my blog content is ready
                             to be published.
@@ -157,14 +147,14 @@
             </form>
         </section>
     </main>
-        <div id="successPopup" class="success-popup">
-            <div class="popup-box">
-                <div class="check-icon"><span class="material-symbols-outlined">check</span></div>
-                <h2>Blog Published Successfully!!</h2>
-                <button id="popupCloseBtn">OK</button>
-            </div>
+    <div id="successPopup" class="success-popup">
+        <div class="popup-box">
+            <div class="check-icon"><span class="material-symbols-outlined">check</span></div>
+            <h2>Blog Published Successfully!!</h2>
+            <button id="popupCloseBtn">OK</button>
         </div>
-        
-        <script src="js/add_blog.js"></script>
-    </body>
+    </div>
+    <script src="js/add_blog.js"></script>
+</body>
+
 </html>

@@ -1,83 +1,93 @@
-<!DOCTYPE html> 
-<html lang="en"> 
-    <head> 
-        <meta charset="UTF-8"> 
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-        <title>Blog : Homepage</title> 
-        <link rel="stylesheet" href="css/home.css"> 
-    </head>
-    <body>
-        <nav class="navbar"> 
-            <img src="img/logo.png" class="logo" alt="Logo"> 
-                <ul class="links-container">
-                    <li class="link-item"><a href="#home" class="link">home</a></li> 
-                    <li class="link-item"><a href="/view_blogs" class="link">blogs</a></li>
-                    <li class="link-item"><a href="/add_blog" class="link">write a blog</a></li>
-                    <li class="link-item"><a href="#contact" class="link">Contact</a></li>
-                </ul> 
-            </nav> 
-            <header id="home" class="header"> 
-                <div class="content"> 
-                    <h1 class="heading"> 
-                        <span class="small">welcome in the world of</span> 
-                        blog 
-                        <span class="no-fill">writting</span> 
-                    </h1> 
-                    
-                    <a href="/add_blog" class="btn-write">write a blog</a>
-                </div> 
-            </header>
-            <section class="blogs-section"> 
-                <h2>Latest Article</h2>
-                 <p class="section-text">
-                    Explore trending blogs from different categories.
-                </p>
-                
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog : Homepage</title>
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="desktop">
+            <img src="img/logo.png" class="logo" alt="Logo">
+            <ul class="links-container">
+                <li class="link-item"><a href="#home" class="link">Home</a></li>
+                <li class="link-item"><a href="/blogs" class="link">Blogs</a></li>
+                <li class="link-item"><a href="/add_blog" class="link">Write A Blog</a></li>
+                <li class="link-item"><a href="#contact" class="link">Contact</a></li>
+            </ul>
+        </div>
+        <div class="mobile">
+            <img src="img/logo.png" class="logo" alt="Logo">
+            <button id="menuBtn">
+                <i id="icon" class="fa-solid fa-bars"></i>
+            </button>
+            <ul id="menu">
+                <li><a href="#home"><i class="fa-solid fa-house"></i> Home</a></li>
+                <li><a href="/blogs"><i class="fa-solid fa-blog"></i> Blogs</a></li>
+                <li><a href="/add_blog"><i class="fa-solid fa-file-pen"></i> Write A Blog</a></li>
+                <li><a href="#contact"><i class="fa-solid fa-envelope"></i> Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <header id="home" class="header">
+        <div class="content">
+            <h1 class="heading">
+                <span class="small">welcome in the world of</span>
+                blog
+                <span class="no-fill">writting</span>
+            </h1>
+
+            <a href="/add_blog" class="btn-write">write a blog</a>
+        </div>
+    </header>
+    <section class="blogs-section">
+        <h2>Latest Article</h2>
+        <p class="section-text">
+            Explore trending blogs from different categories.
+        </p>
+
         <div id="blogs" class="blog-grid"></div>
         <div class="view-more">
-            <a href="/view_blogs">
-            <span class="text">view all blogs</span>
-            <svg
-                width="34"
-                height="34"
-                viewBox="0 0 74 74"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-            >
-                <circle cx="37" cy="37" r="35.5" stroke="white" stroke-width="3"></circle>
-                <path
-                d="M25 35.5C24.1716 35.5 23.5 36.1716 23.5 37C23.5 37.8284 24.1716 38.5 25 38.5V35.5ZM49.0607 38.0607C49.6464 37.4749 49.6464 36.5251 49.0607 35.9393L39.5147 26.3934C38.9289 25.8076 37.9792 25.8076 37.3934 26.3934C36.8076 26.9792 36.8076 27.9289 37.3934 28.5147L45.8787 37L37.3934 45.4853C36.8076 46.0711 36.8076 47.0208 37.3934 47.6066C37.9792 48.1924 38.9289 48.1924 39.5147 47.6066L49.0607 38.0607ZM25 38.5L48 38.5V35.5L25 35.5V38.5Z"
-                fill="white"
-                ></path>
-            </svg>
+            <a href="/blogs">
+                <span class="text">view all blogs</span>
+                <svg width="34" height="34" viewBox="0 0 74 74" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="37" cy="37" r="35.5" stroke="white" stroke-width="3"></circle>
+                    <path
+                        d="M25 35.5C24.1716 35.5 23.5 36.1716 23.5 37C23.5 37.8284 24.1716 38.5 25 38.5V35.5ZM49.0607 38.0607C49.6464 37.4749 49.6464 36.5251 49.0607 35.9393L39.5147 26.3934C38.9289 25.8076 37.9792 25.8076 37.3934 26.3934C36.8076 26.9792 36.8076 27.9289 37.3934 28.5147L45.8787 37L37.3934 45.4853C36.8076 46.0711 36.8076 47.0208 37.3934 47.6066C37.9792 48.1924 38.9289 48.1924 39.5147 47.6066L49.0607 38.0607ZM25 38.5L48 38.5V35.5L25 35.5V38.5Z"
+                        fill="white"></path>
+                </svg>
             </a>
         </div>
-        </section> 
-    <footer id="contact"> 
-                <div class="footer-container"> 
-            <div> 
-                <h3>Simple Blog Manager</h3> 
-                <p> A modern blogging platform where writers can create, publish and manage blog posts with ease. </p> 
+    </section>
+    <footer id="contact">
+        <div class="footer-container">
+            <div>
+                <h3>Simple Blog Manager</h3>
+                <p> A modern blogging platform where writers can create, publish and manage blog posts with ease. </p>
             </div>
 
-            <div> 
+            <div>
                 <h3>Quick Links</h3>
                 <a href="#home">home</a>
-                <a href="/view_blogs">blogs</a>
+                <a href="/blogs">blogs</a>
                 <a href="/add_blog">write a blog</a>
-            </div> 
+            </div>
             <div>
-                <h3>Contact</h3> 
-                <p>sohamghosh638@gmail.com</p> 
-                <p>+91 9635219993</p> 
-            </div> 
+                <h3>Contact</h3>
+                <p>sohamghosh638@gmail.com</p>
+                <p>+91 9635219993</p>
+            </div>
         </div>
-        <hr> 
-        <p class="copyright"> © 2026 Simple Blog Manager </p> 
+        <hr>
+        <p class="copyright"> © 2026 Simple Blog Manager </p>
     </footer>
     <div id="edit-popup" class="edit-popup">
-            <div class="popup-box">
-                <main>
+        <div class="popup-box">
+            <main>
                 <!-- ==================== FORM ==================== -->
                 <section>
                     <form id="blogform" enctype="multipart/form-data">
@@ -89,10 +99,7 @@
                                 <label for="title">
                                     <strong>Blog Title</strong>
                                 </label>
-                                <input
-                                    type="text"
-                                    id="title"
-                                    name="title"
+                                <input type="text" id="title" name="title"
                                     placeholder="Enter an interesting blog title">
                             </div>
                             <br>
@@ -101,11 +108,7 @@
                                 <label for="author">
                                     <strong>Author Name</strong>
                                 </label>
-                                <input
-                                    type="text"
-                                    id="author"
-                                    name="author"
-                                    placeholder="Enter your name">
+                                <input type="text" id="author" name="author" placeholder="Enter your name">
                             </div>
                             <br>
                             <!-- Category -->
@@ -131,10 +134,7 @@
                                 <label for="description">
                                     <strong>Short Description</strong>
                                 </label>
-                                <textarea
-                                    id="description"
-                                    name="description"
-                                    rows="2"
+                                <textarea id="description" name="description" rows="2"
                                     placeholder="Write a short introduction or summary of your blog..."></textarea>
                             </div>
                             <br>
@@ -143,10 +143,7 @@
                                 <label for="content">
                                     <strong>Write Your Blog</strong>
                                 </label>
-                                <textarea
-                                    id="content"
-                                    name="content"
-                                    rows="5"
+                                <textarea id="content" name="content" rows="5"
                                     placeholder="Start writing your blog content here..."></textarea>
                             </div>
                             <br>
@@ -160,8 +157,8 @@
                     </form>
                 </section>
             </main>
-            </div>
         </div>
+    </div>
     <script src="js/home.js"></script>
-</body> 
+</body>
 </html>
