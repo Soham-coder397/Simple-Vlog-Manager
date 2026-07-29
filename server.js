@@ -184,6 +184,10 @@ app.delete("/blogs/:id", (req, res) => {
    });
 });
 
+app.get("/view_blogs", (req, res) => {
+    res.sendFile(path.join(__dirname,"public","view_blogs.html"));
+});
+
 // ================= SERVER =================
 app.listen(PORT, () => {
     console.log(`Server Running : http://localhost:${PORT}`);

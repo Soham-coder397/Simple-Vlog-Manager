@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Blogs</title>
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/view_blogs.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="desktop">
+            <img src="img/logo.png" class="logo" alt="Logo">
+            <ul class="links-container">
+                <li class="link-item"><a href="/" class="link">Home</a></li>
+                <li class="link-item"><a href="/add_blog" class="link">Write A Blog</a></li>
+            </ul>
+        </div>
+        <div class="mobile">
+            <img src="img/logo.png" class="logo" alt="Logo">
+            <button id="menuBtn">
+                <i id="icon" class="fa-solid fa-bars"></i>
+            </button>
+            <ul id="menu">
+                <li><a href="/"><i class="fa-solid fa-house"></i> Home</a></li>
+                <li><a href="/add_blog"><i class="fa-solid fa-file-pen"></i> Write A Blog</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <h1 class="title">All Blogs</h1>
+    <div id="blogs"></div>
+        <footer id="contact">
+        <div class="footer-container">
+            <div>
+                <h3>Simple Blog Manager</h3>
+                <p> A modern blogging platform where writers can create, publish and manage blog posts with ease. </p>
+            </div>
+
+            <div>
+                <h3>Quick Links</h3>
+                <a href="/">home</a>
+                <a href="/add_blog">write a blog</a>
+            </div>
+            <div>
+                <h3>Contact</h3>
+                <p>sohamghosh638@gmail.com</p>
+                <p>+91 9635217993</p>
+            </div>
+        </div>
+        <hr>
+        <p class="copyright"> © 2026 Simple Blog Manager </p>
+    </footer>
+    <script src="js/view_blogs.js"></script>
+</body>
+</html>

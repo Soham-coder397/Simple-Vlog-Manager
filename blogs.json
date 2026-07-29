@@ -1,5 +1,14 @@
 [
     {
+        "id": 1785340370889,
+        "title": "My First Blog",
+        "author": "Soham Ghosh",
+        "category": "Programming",
+        "description": "A beginner-friendly guide to creating a backend server using Express.js.",
+        "content": "Express.js is one of the most popular web frameworks for Node.js. \r\nIt helps developers build web applications and REST APIs quickly and efficiently.In this project,I created an Express server with GET and POST routes. The GET route serves the HTML pages, while the POST route receives the blog form data submitted by the user.",
+        "image": "/uploads/70869_49129_html.png"
+    },
+    {
         "id": 1784907276383,
         "title": "IIT Madras WSAI Launches One-Week AI Startup Course with ₹4 Lakh",
         "author": "Education Desk",
@@ -7,15 +16,6 @@
         "description": "IIT Madras launches a one-week AI startup course offering practical training, expert mentorship, investor pitching, and a ₹4 lakh grant.",
         "content": "IIT Madras WSAI has introduced a one-week AI startup programme for students, researchers, and entrepreneurs. The course covers product development, market validation, fundraising, customer discovery, and business growth through workshops and case studies.",
         "image": "/uploads/76347_iit_madras.png"
-    },
-    {
-        "id": 1784871049160,
-        "title": "Getting Started With HTML",
-        "author": "Tech Ritesh",
-        "category": "Web Development",
-        "description": "Learn the basics of HTML and and create your first web page",
-        "content": "HTML is a standard markup language used to create and structure web pages. It defines the layout of a webpage by organizing content such as headings, paragraphs, images, links, tables and forms.",
-        "image": "/uploads/49129_html.png"
     },
     {
         "id": 1784867738538,

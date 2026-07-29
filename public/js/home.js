@@ -23,6 +23,7 @@ btn.onclick = () => {
     }
 }
 
+let blog = [];
 let blogs = [];
 
 // ===================== LOAD BLOGS =====================
@@ -40,8 +41,8 @@ async function loadBlogs() {
             throw new Error("Failed to load blogs");
         }
 
-        blogs = await response.json();
-
+        blog = await response.json();
+        blogs = blog.slice(0,3);
         container.innerHTML = "";
 
         if (blogs.length === 0) {
@@ -184,7 +185,6 @@ form.addEventListener("submit", async function (e) {
     formData.append("description", description.value);
     formData.append("content", content.value);
 
-    // image input থাকলে
     const imageInput = document.getElementById("image");
 
     if (imageInput && imageInput.files.length > 0) {
