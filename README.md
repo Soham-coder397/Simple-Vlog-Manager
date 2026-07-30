@@ -61,7 +61,7 @@ Uploaded Images:
 <img width="1893" height="940" alt="image" src="https://github.com/user-attachments/assets/23b553e1-8608-42f4-9c28-f014c6947873" />
 
 ### ✏️ Edit Blog
-<img width="1895" height="1025" alt="image" src="https://github.com/user-attachments/assets/af08a9f3-b808-41c7-8e03-28570f23ca62" />
+<img width="1893" height="1022" alt="image" src="https://github.com/user-attachments/assets/c10508c5-62d5-462a-aa53-8d4bde554362" />
 
 ## Responsive Design
 The website is fully responsive and works on:
