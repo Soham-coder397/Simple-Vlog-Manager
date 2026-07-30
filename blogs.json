@@ -1,12 +1,12 @@
 [
     {
-        "id": 1785340370889,
-        "title": "My First Blog",
-        "author": "Soham Ghosh",
+        "id": 1785344045647,
+        "title": "Getting Started with Express.js",
+        "author": "John Das",
         "category": "Programming",
         "description": "A beginner-friendly guide to creating a backend server using Express.js.",
-        "content": "Express.js is one of the most popular web frameworks for Node.js. \r\nIt helps developers build web applications and REST APIs quickly and efficiently.In this project,I created an Express server with GET and POST routes. The GET route serves the HTML pages, while the POST route receives the blog form data submitted by the user.",
-        "image": "/uploads/70869_49129_html.png"
+        "content": "Express.js is one of the most popular web frameworks for Node.js.It helps developers build web applications and REST APIs quickly and efficiently.In this project, I created an Express server with GET and POST  routes. The GET route serves the HTML pages, while the POST route receives the blog form data submitted by the user.",
+        "image": "/uploads/45609_express.jpg"
     },
     {
         "id": 1784907276383,
