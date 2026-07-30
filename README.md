@@ -82,6 +82,6 @@ The website is fully responsive and works on:
 - Cloud Image Storage
 
 ## Project Author
-Soham Ghosh
-B.Sc. Computer Science Student
+Soham Ghosh || 
+B.Sc. Computer Science Student ||
 Full Stack Web Development Intern
