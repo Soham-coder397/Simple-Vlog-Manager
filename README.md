@@ -227,6 +227,14 @@ http://localhost:3000
 
 ---
 
+# 🎥 Demo Video
+
+🎬 **Project Demo Video**
+
+Click the link below to watch the complete walkthrough of the project:
+
+👉 https://drive.google.com/file/d/1iVW-3NUZp6ryDAd1FvPoQDG2XUtofXt6/view?usp=drive_link
+
 # 📸 Screenshots
 
 ## 🏠 Home Page
