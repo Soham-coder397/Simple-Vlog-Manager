@@ -48,7 +48,7 @@ Uploaded Images:
 
 ## Screenshots
 ### 🏠 Home Page
-<img width="1913" height="1032" alt="image" src="https://github.com/user-attachments/assets/41fe2e59-0a2d-48f9-b4e3-1be51d876c5c" />
+<img width="1894" height="696" alt="image" src="https://github.com/user-attachments/assets/d923002b-4275-483a-ab14-aaf0679fa671" />
 <img width="1863" height="926" alt="image" src="https://github.com/user-attachments/assets/73b102ba-9409-437e-853f-ddfd6d2fbbdb" />
 <img width="1885" height="511" alt="image" src="https://github.com/user-attachments/assets/35579400-fe76-444c-ad98-ae077da027f8" />
 
@@ -61,7 +61,7 @@ Uploaded Images:
 <img width="1893" height="940" alt="image" src="https://github.com/user-attachments/assets/23b553e1-8608-42f4-9c28-f014c6947873" />
 
 ### ✏️ Edit Blog
-<img width="1895" height="1025" alt="image" src="https://github.com/user-attachments/assets/af08a9f3-b808-41c7-8e03-28570f23ca62" />
+<img width="1893" height="1022" alt="image" src="https://github.com/user-attachments/assets/c10508c5-62d5-462a-aa53-8d4bde554362" />
 
 ## Responsive Design
 The website is fully responsive and works on:
