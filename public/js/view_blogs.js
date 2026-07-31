@@ -89,7 +89,7 @@ async function loadBlogs() {
                     </h3>
 
                     <p>
-                        ${blog.description}
+                        ${blog.content}
                     </p>
 
                     <p class="author">

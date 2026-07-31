@@ -1,5 +1,14 @@
 [
     {
+        "id": 1785507373230,
+        "title": "The Importance of Libraries in Student Life",
+        "author": "Arnav Acharya",
+        "category": "Education",
+        "description": "A library is a place where knowledge meets curiosity. It provides students with books, digital resources, and a peaceful environment to learn, research, and develop lifelong reading habits..",
+        "content": "A library is one of the most valuable resources for students, teachers, and lifelong learners. It is often called the \"Treasure House of Knowledge\" because it contains a wide collection of books, journals, magazines, newspapers, and digital learning materials. Libraries play a significant role in education by providing access to reliable information and encouraging self-learning.",
+        "image": "/uploads/73206_libraryy.jpg"
+    },
+    {
         "id": 1785344045647,
         "title": "Getting Started with Express.js",
         "author": "John Das",
