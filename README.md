@@ -204,7 +204,7 @@ The project is fully responsive and optimized for
 ### Clone Repository
 
 ```bash
-git clone https://github.com/yourusername/Simple-Blog-Manager.git
+git clone https://github.com/soham-coder397/Simple-Vlog-Manager.git
 ```
 
 ### Install Dependencies
